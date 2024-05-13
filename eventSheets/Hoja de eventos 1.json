@@ -1,0 +1,343 @@
+{
+	"name": "Hoja de eventos 1",
+	"events": [
+		{
+			"eventType": "variable",
+			"name": "isDashing",
+			"type": "boolean",
+			"initialValue": "false",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 183421803257366
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-collision-with-another-object",
+					"objectClass": "Player",
+					"sid": 612130902389896,
+					"parameters": {
+						"object": "Ground"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-vector-y",
+					"objectClass": "Player",
+					"sid": 412877181517929,
+					"behaviorType": "Plataforma",
+					"parameters": {
+						"vector-y": "-800"
+					}
+				},
+				{
+					"id": "create-object",
+					"objectClass": "System",
+					"sid": 907593047889476,
+					"parameters": {
+						"object-to-create": "Partículas",
+						"layer": "0",
+						"x": "Player.X",
+						"y": "Player.Y+30",
+						"create-hierarchy": false,
+						"template-name": "\"\""
+					}
+				}
+			],
+			"sid": 969682130280511
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-collision-with-another-object",
+					"objectClass": "Player",
+					"sid": 927394738216636,
+					"parameters": {
+						"object": "SimpleBlock"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-vector-y",
+					"objectClass": "Player",
+					"sid": 522727866694189,
+					"behaviorType": "Plataforma",
+					"parameters": {
+						"vector-y": "-800"
+					}
+				},
+				{
+					"id": "create-object",
+					"objectClass": "System",
+					"sid": 822657239061393,
+					"parameters": {
+						"object-to-create": "Partículas",
+						"layer": "0",
+						"x": "Player.X",
+						"y": "Player.Y+30",
+						"create-hierarchy": false,
+						"template-name": "\"\""
+					}
+				}
+			],
+			"sid": 332210073297241
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-key-pressed",
+					"objectClass": "Teclado",
+					"sid": 311419652978978,
+					"parameters": {
+						"key": 32
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "tween-two-properties",
+					"objectClass": "Player",
+					"sid": 447798879964297,
+					"behaviorType": "Tween",
+					"parameters": {
+						"tags": "\"\"",
+						"property": "size",
+						"end-x": "100",
+						"end-y": "50",
+						"time": "0.1",
+						"ease": "default",
+						"destroy-on-complete": "no",
+						"loop": "no",
+						"ping-pong": "yes",
+						"repeat-count": "1"
+					}
+				},
+				{
+					"id": "set-vector-y",
+					"objectClass": "Player",
+					"sid": 612819764251018,
+					"behaviorType": "Plataforma",
+					"parameters": {
+						"vector-y": "1200"
+					}
+				},
+				{
+					"id": "toggle-boolean-eventvar",
+					"objectClass": "System",
+					"sid": 156595283037082,
+					"parameters": {
+						"variable": "isDashing"
+					}
+				}
+			],
+			"sid": 990764570307831
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-collision-with-another-object",
+					"objectClass": "Player",
+					"sid": 427000640635513,
+					"parameters": {
+						"object": "Ground"
+					}
+				},
+				{
+					"id": "compare-boolean-eventvar",
+					"objectClass": "System",
+					"sid": 491799762013686,
+					"parameters": {
+						"variable": "isDashing"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "destroy",
+					"objectClass": "Ground",
+					"sid": 453699599962616
+				},
+				{
+					"id": "toggle-boolean-eventvar",
+					"objectClass": "System",
+					"sid": 200728918000835,
+					"parameters": {
+						"variable": "isDashing"
+					}
+				},
+				{
+					"id": "shake",
+					"objectClass": "Camera",
+					"sid": 784203623627430,
+					"behaviorType": "ScrollTo",
+					"parameters": {
+						"magnitude": "20",
+						"duration": "0.3",
+						"mode": "reducing-magnitude"
+					}
+				}
+			],
+			"sid": 820649434836299
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-collision-with-another-object",
+					"objectClass": "Player",
+					"sid": 215225268093286,
+					"parameters": {
+						"object": "SimpleBlock"
+					}
+				},
+				{
+					"id": "compare-boolean-eventvar",
+					"objectClass": "System",
+					"sid": 593033521637289,
+					"parameters": {
+						"variable": "isDashing"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "destroy",
+					"objectClass": "SimpleBlock",
+					"sid": 183561447230414
+				},
+				{
+					"id": "toggle-boolean-eventvar",
+					"objectClass": "System",
+					"sid": 930416520252252,
+					"parameters": {
+						"variable": "isDashing"
+					}
+				},
+				{
+					"id": "shake",
+					"objectClass": "Camera",
+					"sid": 305816654859760,
+					"behaviorType": "ScrollTo",
+					"parameters": {
+						"magnitude": "10",
+						"duration": "0.3",
+						"mode": "reducing-magnitude"
+					}
+				}
+			],
+			"sid": 414547011641851
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "key-is-down",
+					"objectClass": "Teclado",
+					"sid": 242936350089287,
+					"parameters": {
+						"key": 39
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-angle",
+					"objectClass": "Player",
+					"sid": 422483498345441,
+					"parameters": {
+						"angle": "280"
+					}
+				}
+			],
+			"sid": 216617063638685
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "key-is-down",
+					"objectClass": "Teclado",
+					"sid": 377778851067496,
+					"parameters": {
+						"key": 37
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-angle",
+					"objectClass": "Player",
+					"sid": 969374174957130,
+					"parameters": {
+						"angle": "260"
+					}
+				}
+			],
+			"sid": 549952640040552
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "key-is-down",
+					"objectClass": "Teclado",
+					"sid": 172886795843245,
+					"parameters": {
+						"key": 39
+					},
+					"isInverted": true
+				},
+				{
+					"id": "key-is-down",
+					"objectClass": "Teclado",
+					"sid": 177329305724011,
+					"parameters": {
+						"key": 37
+					},
+					"isInverted": true
+				}
+			],
+			"actions": [
+				{
+					"id": "set-angle",
+					"objectClass": "Player",
+					"sid": 596472637999883,
+					"parameters": {
+						"angle": "270"
+					}
+				}
+			],
+			"sid": 161844099412280
+		},
+		{
+			"eventType": "group",
+			"disabled": false,
+			"title": "Block Creation",
+			"description": "",
+			"isActiveOnStart": true,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-start-of-layout",
+							"objectClass": "System",
+							"sid": 960673617909499
+						}
+					],
+					"actions": [],
+					"sid": 295044816870449
+				}
+			],
+			"sid": 149363977247172
+		}
+	],
+	"sid": 501564203917714
+}

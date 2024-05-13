@@ -1,0 +1,83 @@
+{
+	"name": "Player",
+	"plugin-id": "Sprite",
+	"sid": 689154383796088,
+	"isGlobal": false,
+	"instanceVariables": [],
+	"behaviorTypes": [
+		{
+			"behaviorId": "Platform",
+			"name": "Plataforma",
+			"sid": 920095602447582
+		},
+		{
+			"behaviorId": "bound",
+			"name": "RestringidoALaEscena",
+			"sid": 475803907278398
+		},
+		{
+			"behaviorId": "scrollto",
+			"name": "ScrollTo",
+			"sid": 563535827863299
+		},
+		{
+			"behaviorId": "Tween",
+			"name": "Tween",
+			"sid": 617644656313929
+		}
+	],
+	"effectTypes": [],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 206,
+						"height": 300,
+						"originX": 0.5,
+						"originY": 0.5,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"imageSpriteId": 9059246,
+						"collisionPoly": {
+							"points": [
+								0.9611650485436893,
+								0.5016666666666667,
+								0.7912620618505385,
+								0.6749998982747397,
+								0.5849514563106795,
+								0.6949998982747395,
+								0.3689320758708472,
+								0.6899999491373702,
+								0.24757285256987638,
+								0.6866664632161461,
+								0.06553398058252424,
+								0.6866666666666666,
+								0.06310683315240062,
+								0.306666717529297,
+								0.2500000370358958,
+								0.30166666666666697,
+								0.5970874897484636,
+								0.27833333333333354,
+								0.75,
+								0.28833333333333333
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1,
+						"tag": ""
+					}
+				],
+				"sid": 597738803486707,
+				"name": "Animation 1",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 5
+			}
+		],
+		"subfolders": []
+	}
+}

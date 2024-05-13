@@ -1,0 +1,11 @@
+{
+	"name": "Blocks",
+	"plugin-id": "Sprite",
+	"sid": 939607872506730,
+	"instanceVariables": [],
+	"behaviorTypes": [],
+	"effectTypes": [],
+	"members": [
+		"SimpleBlock"
+	]
+}
